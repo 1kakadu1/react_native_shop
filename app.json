@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Pizza time",
+    "slug": "app-pizza",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "userInterfaceStyle": "automatic",
+    "android": { 
+      "package": "com.app.app",
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 1,
+      "softwareKeyboardLayoutMode": "pan",
+      "userInterfaceStyle": "light" 
+    },
+    "ios": {
+      "supportsTablet": true,
+      "userInterfaceStyle": "light"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "Pizza time",
+            "project": "Pizza time",
+            "authToken": "99abfbb79fce4b60b8c520d6d1cbcdb3a8bd9173def14601948f2313d63b401e"
+          }
+        }
+      ]
+    }
+
+  }
+}
